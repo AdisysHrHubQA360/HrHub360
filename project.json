@@ -1,0 +1,265 @@
+{
+  "name": "Testing HRHUB360",
+  "description": "EMPLOYEE TESTCASES",
+  "main": "Multiple.xaml",
+  "dependencies": {
+    "Microsoft.Activities": "[1.0.1]",
+    "ReporterForUiPath.Activities": "[2.0.0]",
+    "UiPath.Excel.Activities": "[2.11.1-preview]",
+    "UiPath.Mail.Activities": "[1.10.5]",
+    "UiPath.PDF.Activities": "[3.4.0]",
+    "UiPath.System.Activities": "[21.4.1]",
+    "UiPath.Testing.Activities": "[1.4.1-preview]",
+    "UiPath.UIAutomation.Activities": "[21.4.4]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "21.4.4.0",
+  "projectVersion": "1.0.26",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": [
+        "TestCase.xaml",
+        "Trial/trial.xaml",
+        "Trial/trial2.xaml",
+        "Trial/trial3.xaml"
+      ]
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "7063d438-2d2b-413f-b946-3973177d2398",
+        "fileName": "Task Management\\TestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "3713c911-1709-429b-a5d3-d8d40fc88381",
+        "fileName": "Support\\User Guide.xaml"
+      }
+    ],
+    "modernBehavior": false
+  },
+  "arguments": {
+    "input": [],
+    "output": []
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Multiple.xaml",
+      "uniqueId": "8699525f-50f3-44c4-81bc-8f6ec192ef5e",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "9017ed0a-36eb-411f-9343-e5c27c904c01",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TimeCard\\Save Timecard and Submit.xaml",
+      "uniqueId": "eb1eae5d-1ae7-42de-b770-3e71191190d5",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TimeCard\\My timecard page.xaml",
+      "uniqueId": "2a2a15ad-8e18-4e2b-86d3-0acd06f3049b",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TimeCard\\Monthly Timecard page - Employee.xaml",
+      "uniqueId": "7249e8c3-867e-468b-a451-ef1353928d5e",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TimeCard\\Missing Timecard page Employee.xaml",
+      "uniqueId": "d8d50efd-4ecc-4881-8132-e7438a394483",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Task Management\\Task Management.xaml",
+      "uniqueId": "7c725a36-4a1c-4bfd-b363-f1483c06b04c",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Support\\FAQS.xaml",
+      "uniqueId": "37bc0bb9-a6eb-4da2-9e33-cab011e1827c",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Support\\support.xaml",
+      "uniqueId": "5ef1db47-b312-4711-8896-38f552a3d1d2",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Support\\Video.xaml",
+      "uniqueId": "adae79d6-24e7-40dc-a5f2-539db94dee4b",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "My HR\\Address.xaml",
+      "uniqueId": "38a97a4e-43da-4392-9c3f-5f187f030da5",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "My HR\\Direct Deposit.xaml",
+      "uniqueId": "c78c732b-02a7-4b8b-816e-b96611663e5b",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "My HR\\Document center page..xaml",
+      "uniqueId": "eb09df68-0306-4f94-8033-abce66a254f6",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "My HR\\Identification.xaml",
+      "uniqueId": "95305725-f007-4b5c-92d4-bfeb236ed05d",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "My HR\\MY HR - Employment Page - Call Manager.xaml",
+      "uniqueId": "571698a1-2144-4e05-b918-13b82cb3f95e",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "My HR\\MY HR - Note.xaml",
+      "uniqueId": "f69e695c-a6f3-4f05-8de7-b1a4666fe0c4",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "My HR\\My HR - Personal Page - Add Notes.xaml",
+      "uniqueId": "3bbfe437-1040-4cc1-81c9-bd9ca4d444b6",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "My HR\\My HR - Profile - Upload Profile Picture.xaml",
+      "uniqueId": "e7419402-653a-4a84-9378-bc577312e7a1",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "My HR\\MY HR-CompensationPage Download Details GridList View.xaml",
+      "uniqueId": "a88754fa-c19d-4107-a45c-d4c6bedcef5e",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "My HR\\PTO Plan.xaml",
+      "uniqueId": "e9a7ba01-2dc9-465b-8b78-5ab14e9c71e9",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Message Center\\Message Center.xaml",
+      "uniqueId": "71739734-906c-454c-8467-13f5883fc9b2",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Help\\Version.xaml",
+      "uniqueId": "01568d7d-45d3-4b2a-9c20-8fc456ce8abe",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Dashboard\\Employee Dashboard.xaml",
+      "uniqueId": "27bc26b9-7a22-43a5-a507-717754ddf236",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Dashboard\\Login to HRHUB 360.xaml",
+      "uniqueId": "24a36772-8922-4182-adfc-11a98e42cd15",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Dashboard\\Submit ticket Via Dashboard Chat Icon.xaml",
+      "uniqueId": "74242835-8235-4711-9b08-46d203b31e1f",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Coperate Hub\\BenefitsPoliciesOthers.xaml",
+      "uniqueId": "58728796-02c5-425b-875f-3e38d42cebe7",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Company\\Announcement.xaml",
+      "uniqueId": "767cc497-afcd-4818-862b-6de93238d97f",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Company\\Calender.xaml",
+      "uniqueId": "bdfcfce1-dd8d-4b00-af00-e0842e55b605",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Company\\Holiday.xaml",
+      "uniqueId": "1ff37c11-4463-4cde-b854-db4325cf6696",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Audit center\\Audit log and Audit Center.xaml",
+      "uniqueId": "0d45e569-40f8-4a65-a16a-5ed97e89b53c",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "My HR\\Dependent.xaml",
+      "uniqueId": "9f82c337-28cf-49c1-8ab4-54ff2b60dee1",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "My HR\\Personal Page.xaml",
+      "uniqueId": "0a7e0a5d-0c2e-47f8-b5e6-383f6878f3a5",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}

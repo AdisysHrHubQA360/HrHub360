@@ -1,0 +1,901 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Message_Center" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1410.4,9148.8" sap2010:WorkflowViewState.IdRef="Message_Center_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="35">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>ReporterForUiPath.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>ReporterForUiPath.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="56">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Message_Center" sap:VirtualizedContainerService.HintSize="944.8,8984" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="MessageCenter" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ra:CreateReport ContinueOnError="{x:Null}" isCreated="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="903.2,134.4" sap2010:WorkflowViewState.IdRef="CreateReport_1" ReportLocation="D:\TESTING HRHUB360\Testing HRHUB360\Reports" ReportName="Message Center" />
+    <ra:StartRecording ContinueOnError="{x:Null}" Location="{x:Null}" isStarted="{x:Null}" DisplayName="Start Recording" sap:VirtualizedContainerService.HintSize="903.2,85.6" sap2010:WorkflowViewState.IdRef="StartRecording_1" RecordingName="Message Center video" SaveInCurrentReport="True" />
+    <ra:StartSuite ContinueOnError="{x:Null}" suiteList="{x:Null}" DisplayName="Start Suite" sap:VirtualizedContainerService.HintSize="903.2,85.6" sap2010:WorkflowViewState.IdRef="StartSuite_1" SuiteName="Status" />
+    <Sequence DisplayName="Login_to_HRHUB_360" sap:VirtualizedContainerService.HintSize="903.2,4007.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="861.6,3914.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="TESTING.xlsx">
+        <ui:ExcelApplicationScope.Body>
+          <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="828,3804.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="sd:DataTable" Name="dtExcel" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExcelReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dtExcel]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="786.4,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="HrHubLogin" />
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtExcel]" DisplayName="For Each Row ExcelSheet" sap:VirtualizedContainerService.HintSize="786.4,3612" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="752.8,3491.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:Boolean" Name="mailandpassword" />
+                        <Variable x:TypeArguments="x:Boolean" Name="onboard" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ra:StartTest ContinueOnError="{x:Null}" TestDescription="{x:Null}" testList="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="711.2,85.6" sap2010:WorkflowViewState.IdRef="StartTest_1" Priority="Critical" TagName="Login" TestName="Enter the URL https://nsiqa.tmshub.net in the browser" />
+                      <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="711.2,532.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Private="True" Url="[row.Item(&quot;Website&quot;).ToString]">
+                        <ui:OpenBrowser.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,430.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:Boolean" Name="logout" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="333.6,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="num0" KeyModifiers="Ctrl" SpecialKey="True">
+                                <ui:SendHotkey.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="855f5432-27c9-4b81-aeda-8e4750fed9a0">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:SendHotkey.Target>
+                              </ui:SendHotkey>
+                              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="333.6,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="+" KeyModifiers="Ctrl">
+                                <ui:SendHotkey.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="f799f661-4460-4652-b64a-b2d7ac4698e0">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:SendHotkey.Target>
+                              </ui:SendHotkey>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:OpenBrowser.Body>
+                      </ui:OpenBrowser>
+                      <ui:ImageFound Found="{x:Null}" DisplayName="Image Exists 'chrome.exe HR'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+                        <ui:ImageFound.Image>
+                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAAVCAYAAADfLRcdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKSSURBVEhLzZVLbxMxFIX7b0E8dkVt0zSBFRJig4RAPFSJqmIFIWl5rxCUR0VLGkL6EAjBFijQpGHZi6891z6+4wmTLiqiHvn6m2P7xLGnE4PhH+rvD4lbK1PbvrQZRxb5cQx6oXUKY1NeqaVv26wvzIZlKANkUj/AcyccXMSk1gwlvEjWo/wurAkYjOlJpU7yFIPWKvOItDddG4E/fwxGhLX9Aq4Ztshjb3ou7RVWOqzW3mCfnr1YodnaWTp+8rQV189XXtln4rt67QYdO3HKa3JqhprL9+l3f2Cf4xrxmq5FlggbDMiR/drr0/ytBarM1enN2zXbZ62urdP07Bw1Wkvey2EbzSUzx9AG7Pa2zLgaPXz81M+Na0hIZI5DWAHYL2Kd7gc6M12h3tZ2xNnX7rynqUqVdj5+skzCou9Oo2k5MlxDas1yO4t1kVrLD+jS5Sv+p0R93/1J5y9cpEdP3M6FnQ0eCev6vF4IJh4JKWI29gVj8ULXb857zpcujA8BxSs1n+Xe9g5V6+fo5evV3DiUzMutrQ071DHQYUXi1WHxgs1Ua7Te3vB+14Y65jGDnXXAfVsjMOlBhz0Gn798tW8MPtfi12vo4CJmNmysvImFjC8YXiIR+7q9TROoXnjB+C3AX+bbj10/d0riFzELO5sBbUwxPnsLi7ft2WtvdEx/kHt1sYe9OiyH5LB377W8h4VrRDWw/DEAo5g0Y/FCI/8pZD4dlvXOfEH+ZTbNZeO+XiO1HrPcBUODsLK8LAs87qdqZLmw2qhZ6uIlGbRWmUeEXumnamRjhx3FyzLN9RugyP/PY1DEy3p5R8uM978OyzwT+eemnqD/9XNwYP5ilQrLxqP+SED8jL2zRxU8vw7RX+ibShtaf0exAAAAAElFTkSuQmCC" />
+                        </ui:ImageFound.Image>
+                        <ui:ImageFound.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="546c80c1-5093-4afe-bd92-871401fafe53" Selector="&lt;html app='chrome.exe' title='HR HUB 360 Human Capital Management Redefined! - [Fabrikam]' /&gt;" TimeoutMS="120000" WaitForReady="COMPLETE" />
+                        </ui:ImageFound.Target>
+                      </ui:ImageFound>
+                      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Sign in Hr" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b231f44-4408-4001-a6fa-5f0497bb2764" InformativeScreenshot="7a99e5bfa89c04bbd3eab92011d2a891" Selector="&lt;html app='chrome.exe' title='HR HUB 360 Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl parentid='panel2' tag='A' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:ImageFound DisplayName="Image Exists 'chrome.exe HR'" Found="[mailandpassword]" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="ImageFound_2">
+                        <ui:ImageFound.Image>
+                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="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" />
+                        </ui:ImageFound.Image>
+                        <ui:ImageFound.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a86eda05-2985-4938-a0f3-b95c9b010621" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;" TimeoutMS="120000" WaitForReady="COMPLETE" />
+                        </ui:ImageFound.Target>
+                      </ui:ImageFound>
+                      <If Condition="[mailandpassword]" sap:VirtualizedContainerService.HintSize="711.2,293.6" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If.Then>
+                          <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="pass" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="StepStatus_1" Name="Testing Platform" Status="Pass" TakeScreenshot="True" />
+                        </If.Then>
+                        <If.Else>
+                          <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="Fail" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="StepStatus_2" Name="Testing Platform" Status="Fail" TakeScreenshot="True" />
+                        </If.Else>
+                      </If>
+                      <ra:StartTest ContinueOnError="{x:Null}" TagName="{x:Null}" TestDescription="{x:Null}" testList="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="711.2,85.6" sap2010:WorkflowViewState.IdRef="StartTest_2" Priority="Critical" TestName="Type the Username and Password " />
+                      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'INPUT  Email'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c715d5b8-145a-4fa6-92fa-22b875211d7e" InformativeScreenshot="34856996ad62eb8e87790af0c54add13" Selector="&lt;html app='chrome.exe' title='HR HUB 360 Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl tag='INPUT' type='email' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into 'INPUT  Email'" EmptyField="True" sap:VirtualizedContainerService.HintSize="711.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" SimulateType="True" Text="[row.Item(&quot;Email&quot;).ToString]">
+                        <ui:TypeInto.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="73f4db4b-16a5-4b69-bdfa-10ef5365a2cd" InformativeScreenshot="34856996ad62eb8e87790af0c54add13" Selector="&lt;html app='chrome.exe' title='HR HUB 360 Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl tag='INPUT' type='email' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+                        </ui:TypeInto.Target>
+                      </ui:TypeInto>
+                      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_25" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="622c506c-a6cf-46e5-8d24-e0cdea17af0f" InformativeScreenshot="39063b367c7e9effe36e2e9e593c43c0" Selector="&lt;html app='chrome.exe' title='HR HUB 360 Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' tag='SPAN' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="711.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_1">
+                        <TextExpression.Namespaces>
+                          <sco:Collection x:TypeArguments="x:String">
+                            <x:String>System.Activities</x:String>
+                            <x:String>System.Activities.Statements</x:String>
+                            <x:String>System.Activities.Expressions</x:String>
+                            <x:String>System.Activities.Validation</x:String>
+                            <x:String>System.Activities.XamlIntegration</x:String>
+                            <x:String>Microsoft.VisualBasic.Activities</x:String>
+                            <x:String>System</x:String>
+                            <x:String>System.Collections.Generic</x:String>
+                            <x:String>System.Data</x:String>
+                            <x:String>System.Diagnostics</x:String>
+                            <x:String>System.IO</x:String>
+                            <x:String>System.Linq</x:String>
+                            <x:String>System.Management.Automation</x:String>
+                            <x:String>System.Net.Mail</x:String>
+                            <x:String>System.Xml</x:String>
+                            <x:String>System.Xml.Linq</x:String>
+                            <x:String>UiPath.Library</x:String>
+                            <x:String>System.Windows.Markup</x:String>
+                          </sco:Collection>
+                        </TextExpression.Namespaces>
+                        <TextExpression.References>
+                          <sco:Collection x:TypeArguments="AssemblyReference">
+                            <AssemblyReference>System.Activities</AssemblyReference>
+                            <AssemblyReference>mscorlib</AssemblyReference>
+                            <AssemblyReference>System.Data</AssemblyReference>
+                            <AssemblyReference>System</AssemblyReference>
+                            <AssemblyReference>System.Core</AssemblyReference>
+                            <AssemblyReference>System.Management.Automation</AssemblyReference>
+                            <AssemblyReference>System.Xml</AssemblyReference>
+                            <AssemblyReference>System.Xml.Linq</AssemblyReference>
+                            <AssemblyReference>UiPath.Library</AssemblyReference>
+                            <AssemblyReference>PresentationFramework</AssemblyReference>
+                            <AssemblyReference>WindowsBase</AssemblyReference>
+                            <AssemblyReference>PresentationCore</AssemblyReference>
+                            <AssemblyReference>System.Xaml</AssemblyReference>
+                          </sco:Collection>
+                        </TextExpression.References>
+                        <sap2010:WorkflowViewState.ViewStateManager>
+                          <sap2010:ViewStateManager>
+                            <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+                          </sap2010:ViewStateManager>
+                        </sap2010:WorkflowViewState.ViewStateManager>
+                      </Delay>
+                      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'INPUT  Password'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c715d5b8-145a-4fa6-92fa-22b875211d7e" InformativeScreenshot="9d4a15841b29b42ba8fe58d865edda33" Selector="&lt;html app='chrome.exe' title='HR HUB 360 Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl tag='INPUT' type='password' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Click 'INPUT  Password'" EmptyField="True" sap:VirtualizedContainerService.HintSize="711.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_4" SimulateType="True" Text="[row.Item(&quot;Password&quot;).ToString]">
+                        <ui:TypeInto.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="73f4db4b-16a5-4b69-bdfa-10ef5365a2cd" InformativeScreenshot="9d4a15841b29b42ba8fe58d865edda33" Selector="&lt;html app='chrome.exe' title='HR HUB 360 Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl tag='INPUT' type='password' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+                        </ui:TypeInto.Target>
+                      </ui:TypeInto>
+                      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b4142fd5-646c-4bba-b064-42a8c2010462" InformativeScreenshot="39063b367c7e9effe36e2e9e593c43c0" Selector="&lt;html app='chrome.exe' title='HR HUB 360 Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' tag='SPAN' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="711.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_1">
+                        <TextExpression.Namespaces>
+                          <sco:Collection x:TypeArguments="x:String">
+                            <x:String>System.Activities</x:String>
+                            <x:String>System.Activities.Statements</x:String>
+                            <x:String>System.Activities.Expressions</x:String>
+                            <x:String>System.Activities.Validation</x:String>
+                            <x:String>System.Activities.XamlIntegration</x:String>
+                            <x:String>Microsoft.VisualBasic.Activities</x:String>
+                            <x:String>System</x:String>
+                            <x:String>System.Collections.Generic</x:String>
+                            <x:String>System.Data</x:String>
+                            <x:String>System.Diagnostics</x:String>
+                            <x:String>System.IO</x:String>
+                            <x:String>System.Linq</x:String>
+                            <x:String>System.Management.Automation</x:String>
+                            <x:String>System.Net.Mail</x:String>
+                            <x:String>System.Xml</x:String>
+                            <x:String>System.Xml.Linq</x:String>
+                            <x:String>UiPath.Library</x:String>
+                            <x:String>System.Windows.Markup</x:String>
+                          </sco:Collection>
+                        </TextExpression.Namespaces>
+                        <TextExpression.References>
+                          <sco:Collection x:TypeArguments="AssemblyReference">
+                            <AssemblyReference>System.Activities</AssemblyReference>
+                            <AssemblyReference>mscorlib</AssemblyReference>
+                            <AssemblyReference>System.Data</AssemblyReference>
+                            <AssemblyReference>System</AssemblyReference>
+                            <AssemblyReference>System.Core</AssemblyReference>
+                            <AssemblyReference>System.Management.Automation</AssemblyReference>
+                            <AssemblyReference>System.Xml</AssemblyReference>
+                            <AssemblyReference>System.Xml.Linq</AssemblyReference>
+                            <AssemblyReference>UiPath.Library</AssemblyReference>
+                            <AssemblyReference>PresentationFramework</AssemblyReference>
+                            <AssemblyReference>WindowsBase</AssemblyReference>
+                            <AssemblyReference>PresentationCore</AssemblyReference>
+                            <AssemblyReference>System.Xaml</AssemblyReference>
+                          </sco:Collection>
+                        </TextExpression.References>
+                        <sap2010:WorkflowViewState.ViewStateManager>
+                          <sap2010:ViewStateManager>
+                            <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+                          </sap2010:ViewStateManager>
+                        </sap2010:WorkflowViewState.ViewStateManager>
+                      </Delay>
+                      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="UserLogin" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a9be32f2-5ac4-4a2b-8f95-0733b49beeac" InformativeScreenshot="5388ad96767b4fc9a19190a7ab1edcdb" Selector="&lt;html app='chrome.exe' title='HR HUB 360 Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl tag='BUTTON' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:ImageFound DisplayName="Image Exists 'chrome.exe HR'" Found="[onboard]" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="ImageFound_3">
+                        <ui:ImageFound.Image>
+                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAb0AAAA3CAYAAACYcpROAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAABKYSURBVHhe7Z1pzyVFFcf9IH4Av4BvTXxt4jtjjPGFxhhjiMZITDDGRIOoRI3igisqsij7Ksim7DDsA8MywzowO8wMM8MAMwPt/d2hpOY8/9Nd1X3rPg/cc5Jf4Omprq4+dZaq6uq+H/nomfd0QRAEQbAKRNILgiAIVoZIekEQBMHKEEkvCIIgWBki6QVBEAQrQyS9IAiCYGWIpBcEQRCsDJH0giAIgpUhkl4QBEGwMlQnvY+f82D31wd2dc++erQ7euyd7t3upPDfw2+f6LbsPtL94s6Xu4+dfb88P+ezF2zpdh16+2QFmTz/2pvdJ3/3iDwn5+JH9rx3xvtCG75x9TZZ3sNrhxLuk/ve+frb3Q1Pv9Z9+dKnZZ1DfPovj3eXbd7bvXzwre7N4++crHwmJ959t3v9zePdQ68c6r737xfkuTXcv/3192p+X+i7T/z2YVlesXXf0ffOHJbj77zbHZy1f/POI92v7n5lbi+qTijVO3W+9sbxbtP2Q923r39O1qVQ9sH1uG5eDns9diJZ8knhr2uefPWUch5KPxxTZS2f+fsT8+tgT2+feN8Okp29sP/N7vLH987LqfNrqenL5NOcc+69O3r7ElrZicciY5EH9obd7T96fO6bSZKf1rS/lX5q4pcn2D+6UvUDerj9uQPdviPH1thp0vWYfmxVbx/FSQ/DOW/Tru7QWydOtmpAuImzbn1J1pXwOguD+seje+Q5OeuR9KzQOZt3Hek+f9GTsm4LnXf1ln3dW1mi84S6X5wFvdOve1bWNcQXLn5y3g9WSLI/vPVFeY6ixlmt9NnBGL2jkx2zBDFkWzAl6SEEnW9dO6x7pR+OqbIJBj13PH9wHtxKhPYRHEoGg31M6Ut8nxjgJZFWdmJpEYss+By+V9Y7J23lj/fvlHUlNpIfWfGSHnpgErJIPUCreksoSno42iM7Dhc3MAnJ65Zt+10n6essOnloFrURkl4S2jsUIElCdHStYJAXze5V1dkHo2AvptIv6hzFFGdFCOyXPLZ3Tb1T9E6d185mSH2j+KlJD9n08qHea4DSD8dUWfj6Vdu63SPvG/vBjlS9JUztS7REslYj71Z2ktMqFuXgNyWDUitD19iIfpREJb1fzv7OV6FKZUgPreotZTDpYWRMMWuNLAkNvXSzNuShzrrrhYO9N7iRkh6CnrxlQwIVS5ljBSc8565XZN0K9Pb4bAbqCW1htqHOtUx1VoT2//yOU51qqt5TAPZsZBFJj+Msr+TlLUo/HFNlsQOWMqfIk3veGD3jW0Rfoim19NvKThItY1ECHxuT8JL0XWOj+hFik94Z/3puvnw7VtCDWq1rVW8Ng0mPDuRCVjjCMhPPtXg2dfPW/fPnLsogvYA91FmMBn50m78s0TrpMZOgrgQdxkhr28x4vfv8sWgvQZngrM5Bt8/NRu/XbHl1rse7XzzoLttgLLTB1q/45jXbusM9yz+MGn9zT1kSVc7KDCjXDdDHtz17YN4HSkjCeYIq0Tv6xMawNU9/nhMsIukh2w/0DxCUfjhmy3Hv6E0J139s5+G5DrnvP92/c75sTj9Z4Z6Zjdj6S1BtZfaY9J3AzniW6On9yKyPv3PD84N1L8JOEi1jEbCyxIqNEnySer9/8wuDujlw9Hj3tSu2rql/Pf1oiNOu3Pr/gRR1ewNm9MqABx1wHnboxUOrh1b11tKb9KiYC1ihM5ThcFMEIBVAVOAYSnoIDumNalsnPepX5cFzQJKXLUviVtN5HOyMG9YmMZaOMHpVP4FRBQTLVU/skwaTC5tc1LkW5ax3zmbhqix86ZKn5WyGJEwyTuVq9Y7NqUDgOcGikh7/0repRemHY7YcCVzNIljqZMnTlgc2M6mRce1mpERpWxPYmjdgu+mZU5fIW9kJtI5FwNKZFc7GT1QM4hpXPL5vjZ/yF/5ny7fSz5j41QcJUA28vRWGPj3kA9JW9dbSm/RU4KQBQ6NMAoQ9T80sSpIe16sZyS8r6X3uwi3dnsNrz1FGrHZQDs1i6XA1K1AjbAvBkKCYCxMGO2sgiHz18mdkHTm1zgrnP7R7zfNEAlC+hDJG7wQ4lTgIWLbsopIe0reppTSRPCD6841j7wzu0lW65Lzv3thvB4rStuaQINTSPDtL88Tbyk6gdSz64j+fkrO8vkE34Kdq9mJ1A630s+ikp/yBv9XgIuHZCDafyrSqtxY36X3qvM3yYiUjTG/XIMs1ebmSpIdQl9rUsp5JD0qMmKSiRqglsyySG0nOih1hW9iZaWeW9OVTsxFVLjgTTqXqyBnjrCQI23bM/YKH37/eGL17gwFsxG7wWGTSQ7gu18/PBaUfjuVlvKDKqymqzhxlQ/TdmCXOkrYq6G8rVpet7GQZsej39+1YMyjk7z9vGt4xSD/YxKQGlK30MzZ+eYxJTvDojsPz+JvDsfTvreqtxU16jCIZTeZCc0unlcpJMD6cP5XxOssaEKKMYz2TnueINiEpZ6KjMYC8nIJg+MzeUxMVokaROWqZhnaptlD/UNAd46z0AX2RC9emDanMWGf1nMfqdErS4y9rh16/lSSSn96+/ZT3kBDqL0lc9M9XLntmrtMcbFCV76OkrQqW7a1YXbayk2XEIl4HsVK6EsJMkKW7vG9YjuUxRV6ulX7G+pGHtx9gygYqaFVvLW7SU6MXZg+l73ep8+2SjNdZPLeywVktB65n0mNHnw2UaiMLycZKqTOBOt86bI66l9RvarZRslw6xllVIiHoE/xTmbHO6s2e7fPUKUkPvaj7Vs+DVDmO5WVUW7jG0Gsui6akrQq1NGt1qepehJ0sIxaptm+bzSSHBoQ1tNLPWD/yYEBtH48kIX6c/d/to/TSqt5a3KTHLkUrNQlFjWzpvHwq63UWIzgSnxW7vq4CSeukR1meE6jnSuqVBXZjWlGB14NlDOOvvcGSZxV2wMCMNM0KVPBSm29yap2VPlIzVAw7X4Ic66zeLNuu8yv7ULpXgQU7woZtcqWU3dSi9MOxvAz6stI3eGlFSVstbLZSGxBYLs/LtbKT1rHIs8Mpz40UrfQz1o/64LUIFeOSYA9scKr5QhK0qrcGN+kpJ2XjBhs4VHmLmpYjeUf0dZZyNLupRQW1RSa9GiEI22dKoAy9ZgSpAjJ/c1yVV5tm8iVXtcRJ29VutkSps7Kc85P/vNS9dEB/acFuNpnirKpNHMvLKPvgelw3L+clPeyI3WN2lmA3tZS0RfmTaktrStqaoG0kHJXw0Il9HqzqXoSdtI5Fnh2qtk+hlX689peKd5/eDnUr2Mf1T71a/Km8VvWWUpX0apx0atLj32/aun9NpzPKSZtaVFBbdtJjBHnj06+tWb9P1AQZRU3SU8t+dhlIPdhXy7I56h5qha3XdlAw1P99lOhV2Yey4b6kx2CAJU0r+aaWkrbU+FOpvkv0ZCmte0hKl3lrRdlJ61jk2aFKBl5dVlQcaqUfr/2l4iU94NNfatCjhME0s7S+AXSiVb0lbOikx7/zAqiV1EkqqCljG2Kq0RAuWYZQ399Uhs4xW86jJump7c350mZCzQb7dpNOdVaSrFqOHer/Pkr0quxD2XBf0uPf1ZJM3gclbanxp1J9l+jJUlp3n3gfSZhat2cnrWORZ4cqGXh1WVFxqJV+vPaXirrPHGZaJB3rI56wElLyvLVVvUNs2OXNVOYP9+10N7WooKaMbQivHVyH+iwcV6JGYcrQWyxvUp9a/1fP69RzPxzKtj0x1lmHRmgl/e+h2sSxvIyyD67HdfNyQ0kP3arXJNJsp6QtH4akh4b4CLP3Iv3YuofspHUs8uxwoyS9sX5UKkNJL8EzRnS29/AxueyaS83Xo1rV67EhN7LkzkzA8Ta1sDZspaaNiZJ25NCm8x/cLR/IWgNa1kYW9U6f9wIzyc0ucZIDve3zY50VA+17IF2r98SyNrLkdqS+CMIZbGpR+uFYfg0VuOkDtZHFvpdEP6pgMKQnxZi+JOiy644dy32DtVZ2spE2smAHJNy8f9QgWLVv2X5U+hmy0liUwyyNT7Fhw8o2Ee/LN320qjfHTXpqmy+GgwGp8paSbcalQc/b1MK32azUOEOitB0W9T6cDWTqlQPu5bQry74dV/rKQ8lnx4bE++ahclZmPrnjsEFGOX/fKHKs3r1XFvINO7DIpAfephaCoBWb9FRbvEGJhXbQHitDelKU9GVOTUBsZSfLiEWq7UPvwyZU35YmvfX0o0VAvOBVA76daQWdewPpIVrVC27SUy+EIkPb2xMlI9uazlKbWpQsM+kxUrTB0jqT2i3J3xzP61LQ8WrJ0jqjN/OpFQK4SsbKWa0T0lY1I2f26b0HOFbvanlW6VQFoylJj9Gl2tSiBJ3l56rZRqnz0o6WSa8voNbQyk6WEYumvJyu7Kw06a2nHymwcVaX+HB3jv0WqsV7rYWVLv69Vb1jcJOeF0iHvkUHavkMKf0MmeosyqpNLVaWmfRUsORvjqcy3qyEER4GntdnUUuWiJ3ReB8yrhXuZMqHcr12eJtkxujdCwrYm30mqYLRlKQHQ+8ZJbFJjwCrfMKbXed8mJIe1NrJMmKRGpzyZ8ln+pSdjU16sAw/8vDstGSAoe4v+UGresfgJj3wPvI69Pkf9ZFXzuPnUvJytZ2lNrVYWWbSU7sl1bKL2i2JUdvfxcohEJIYrRydjXh/cPOpO5hwnEWJ+p5hqbPSZvXxXW+UOkbv6ks4iH13CVQwmpr0vH6xopxS2QHXHfq9vg9b0qu1E2gdi7zkyC9g2MGURdnZlKS3DD/y8AYYJYMzdX/JD1rVO4bepOf9nAdLePYr5QmWa9QoRT18rO0slKNG+bksK+nhCOpnP9SSiPfTQpRVX9jnPnkpE+e0wv3nRuI5K8vB6KGPCx/evWYQYZdnodRZwRulqpltrd5ZTlbB374snlDBaGrSA88vclFOSV+rZTqWb3h+Ycsn6A8GO1bGBLWavqyllZ1A61gEKkEi7LZWryMBbeV3/KxMSXrQ0o+GUHsViEVsHFTl4cxbXpS2nS9Dtqq3lt6kB97b8xwhczM9ZW2274c+vdHsmM7y1niTLDLpqd1P/IgkPyapgi+iRi78zZZjpRt0izNcORvJose+H8Dkvrn/vG71fEslLoW35GBnTTXOyr2qUSqGaxN8id7ZnsxuLmzN05/nNK2SHqhNLbmgM3tOnx1wjI1ZPPcggQP/z8d4vdWND3LSq7GTRMtYBN5AFiEB3fvS6/OBV4oD183sFHtS15ma9BbtRyUwG6M+bI+BpJWkZ+yOMpyDHkhAKkFjt/mApFW9tQwmvT5HLRHO43zqsXWPSXrQt6llkUmvVuggb8mSZw8EsLHiBXeeTVjBgNRIVqG+xWkTQ22gLB2lTtV7n21By6SHfvs2taikB1ybZ1FTpc/W+tgoSQ9qZ3stY1GCz395A9oaIelaO9uofpQkj7veAKNG2IRnn7m2qreGwaQHXOCRHYerjY2bY9bgGZnXWUNJj/O8TS3rlfS8pJTDSHJMwCMgXyR0wk5LNXKqCWIsAdmJhB1J1TorzwTtb/chzEDzX8qYonfayKy4L4C1THrQt6nFS3ow1g6S0DY+46TqHmIjJb1SO8lpFYtyfnb79kmJj29mqhf4N6If5ZLHXfTE81LrF6XCs1Clg1b11lCU9IDGnrdpV+/SYi4s0Q2NRL3OGkp64G1qWY+kh05KgxDf6Lx6yz43WObC3TFrs0uaCYzHaqB26u/tLs1fzB0TKFUiQfJnkmP0To18ueGsW/1vhSZaJz3ug1G3kr6kBzV2kIQ28qOz3vOlEjZS0oMSO7G0iEUWdMwqytqW+UJ7WIqnb1WdG8mPlKi4e/p1z84HaKV6YHBB24Y+Et2q3hKKk16CDj333h3zDmQ3UWo0/yVQ8PM6rJl7HZ8zJenR4SjByjKSHh3AjyGiA3RRcq8WRqzcJ+/cMXJLQt18gYHgxrq25/iMAtVvU/GMLn//aAjqV88O8nf2xjirN0rNd5+W6p1ETuDatP1Q1U+OtE564G2wQGeqvAU7+NuDu+Z9iW7yVrATmH7YvPNI9+uZT01Z0kmM6ctSWtmJxyJjkQcft+cZIX6Vv2fJNWgjx3nHj4Gp56uJ9fajIemLu0kPPPPM4xXC3xzn39OPAZTSqt4+qpNeEARBEHxQiaQXBEEQrAyR9IIgCIKVIZJeEARBsDJE0guCIAhWhkh6QRAEwcoQSS8IgiBYGSLpBUEQBCtDJL0gCIJgZYikFwRBEKwMkfSCIAiClSGSXhAEQbAyRNILgiAIVoZIekEQBMHKEEkvCIIgWBki6QVBEAQrQyS9IAiCYGWIpBcEQRCsDJH0giAIgpUhkl4QBEGwItzT/Q8vGYY3IpGMxwAAAABJRU5ErkJggg==" />
+                        </ui:ImageFound.Image>
+                        <ui:ImageFound.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ced5fc9-d5e2-4371-8a3e-02841ce8c077" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;" TimeoutMS="120000" WaitForReady="COMPLETE" />
+                        </ui:ImageFound.Target>
+                      </ui:ImageFound>
+                      <If Condition="[onboard]" sap:VirtualizedContainerService.HintSize="711.2,293.6" sap2010:WorkflowViewState.IdRef="If_2">
+                        <If.Then>
+                          <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="Pass" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="StepStatus_3" Name="Login Button" Status="Pass" TakeScreenshot="True" />
+                        </If.Then>
+                        <If.Else>
+                          <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="Fail" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="StepStatus_4" Name="Login Button" Status="Fail" TakeScreenshot="True" />
+                        </If.Else>
+                      </If>
+                      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3fe1a884-8d77-452e-84f7-95f4a672c3e4" InformativeScreenshot="66e0a530638fd9733b5e3f2f3a60f973" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl tag='BUTTON' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+                        </ui:Click.Target>
+                      </ui:Click>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
+            </Sequence>
+          </ActivityAction>
+        </ui:ExcelApplicationScope.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ExcelApplicationScope>
+    </Sequence>
+    <Sequence sap:VirtualizedContainerService.HintSize="903.2,3999.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Boolean" Name="subject" />
+        <Variable x:TypeArguments="x:Boolean" Name="read" />
+        <Variable x:TypeArguments="x:Boolean" Name="unread" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ra:StartTest ContinueOnError="{x:Null}" TagName="{x:Null}" TestDescription="{x:Null}" testList="{x:Null}" DisplayName="Start Test" sap:VirtualizedContainerService.HintSize="711.2,85.6" sap2010:WorkflowViewState.IdRef="StartTest_3" Priority="Low" TestName="Message Center" />
+      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'Message Center" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0fb575cc-4691-4a84-8ee5-1b43fd1a9647" InformativeScreenshot="f1537f926cc9853753804c5e6adfdebd" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl aaname=' Message Center ' parentid='side-menu' tag='A' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+        </ui:Click.Target>
+      </ui:Click>
+      <ui:ImageFound Found="{x:Null}" DisplayName="Image Exists 'chrome.exe HR'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="ImageFound_4">
+        <ui:ImageFound.Image>
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIsAAAAnCAYAAAA/x7tqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAhKSURBVHhe7ZpBS9xaFMffBxn8DMGN6KLtYuhCZzWMUO3ijcJrKcgMiD54zCx0XIiz0CmIFjoKBQNlZiEOFLIpDghZFIVChEIWQkDIQvArnHdukpvck9xkUhWtcBe/xSQ5N8nN/5x7zrnz1+3tLSgUeVBiUeRGiUWRGyUWRW6UWBS5UWJR5EaJRZEbJRZFbnKL5XRzDAoFAa0Fhiu/NokF3Tcx+0UdbOm1ij+Vu4sFaXxzpdcm+HkA5ZitEsvz415iKSz1wZFcG8fcfp20VWJ5dtxPLIUFOPolvz5iCFuaxFaJ5dlxT7GMwdyhJb2e4xot0IJrNW08slVieXbcSSzVtRbM8Y8+ewCW5HofF4wmtxuHrc1WOEa6WBywBvuwsliCieBa7VUFas0DMGzZ9QE3NpzqbaiVX4biLEyVoLrcgaOhLbcJsIc6bC1V4EUYASdhZnEVdvQh2DdyGw97CEebdShPTwZ2YzAxvQAr2304dyTXi9gG7C3Ph/f03nHTt7P1hXC8qp7y7Pzer7gDBs/cv8hMDZyfA7zvAsxM+eOz7/KiXIfG4QCsEc98N7HoJvSW+O/XsGPKbW6v+lALbArFDpjf2+EYUrE4uGSVheiTYBJqXyWR7BLvE768nJl/cTLidlil9ZaiDy1lehVOLuN2Lpwf1kMxS9EqsDWUFwDW8SrMyGwYU3WoLUa/ZWKx9Ox7a+U2nF5TG/bMp+1K5EgytHn8lulFy93E8sUCp18Pfxe3TamNeA1brkSPSYjFNWFrOjjH0F5CeakJO03Rexgl+hFidtqr99DY1aGn78N6nU7OzEfxOV0w26XwHLvfu+Y+HPV12NvAe4p51jQKPbRDz//6XhgXPfMffM7tDtKEqihaDYV2Fdl5mJ2YUJhnV6A8i5D39ImLhd47iGQbLRKJGdoHnTgHtZuEueUWdPt96OZ55oC75SybQ/xIBqzzCZX2XMTeyjx0f9LwGheL+VH4cNPoGSQkOnh/4fybaOlzvzWj48U2mLFlw/oi3FPDcfk5fP4GP47RceuM2t1e6lANz+MSOuTnTNgp8uPoBJ8uqN31ENaF8/RjO0JERjBq9UjUwoj1mYqB2F8NYCUU8Ti8Q6eNbBF85nfC+XWDOxV+i1l+fAyjcyxaZT5zxN3FwvKRtcgTEj0XsbcSlNipYhGFxz6cLHyTayqe+NjxzGjFwKWt63k94yAS4S9RDLKqDgV6yO060B06/vFrE47E8SRemJyr4By553hKn8qCo78je/HDWYfz4XHpu8avaRrgesdxeefHkEj4gt1x9K47x/Ki5R5iweMYUov8WKznIvZWVo79iU79sGftyJtE7yfYcCSs5eFEDwVbltPsDsFKrNcyaEk/sbQPp5eyj/f7pImFRMFCK9d7RmKxofdBdjwGzge/Jio+6JhauQW9CycQUn7uJxYS3urQC71MCNXCEmW2hTVZEAtbT8PjOSGTKElS/QoKcxADq4OUisbGnCqRKAa50p5uwHnK2u3jelXUDlYWYjWUQBDLyCjokSYWzM0Ececjcjz3rEPzMA+/glo/7IP5a7Sj3E0swouKYY/3XEhvRZistDHIJOaEepYD53pTMhkBWJk09AupJzk/dGikVmDjUP5Ph/N4pBpZtQk8mFjoUpKPWJTGcn1nMV3YE4sd6bLKubdYSHnsJZ5iLkPL6lximcUQaRhgjEDqCTcuWKaf4ZN+S8BM20wNve6lCT3MURqk3xKACbcZJvDxkN7EfAarQycK6/Io/LBiqX2SzwtF3nNxry7AYNUi6bcEaO+hl9KVv79YSIaP4hjExZNjjO9Cs67Q/I3d7BHgpPTWhCqqgGXhqGYZ4wYjVb9FSlyed5E8jY0nyY/SxELeM2duFomFJr7lz9md8/yw5XRfqKLGoEhaDBEPIBa67BSLUWIb3wpIHcPBkpAfR2r94MNIcGzxnAl7rD/hsQDdH/RaHywLw7H9Ep4dN3e5XQWqn2Plb8DpRvRM4buIHzyle50qFlINpVR9GdWQ+VHYkGVNTmIncG2DLYjYPsYlms/T2kAabUiLYc1InGc8iFjilYWPmPD6pI/h4jlhIlgn8SwuGJaXsM5nCb2ci9CBk+VozOKGkZwILOHDrYkChthgy8A5Xg3tCkVMwhMRh/4H5x3vTYjVBoov3vG0By2aO4liIVEYmW7BCdnCwHfM6rMQsbGudB+sePKOecnW23HQ3qKYuGBINESnknSkjWaUg2m4XNPzPg8kFloqeywnFZw5xjUKTuzgIn53spNcWzUUIp/kWEdUK9dhfVeHk0GyE6uRZ8KKjXSMsXrawOppMICj3RbmPEICK3Y1XXxOoYEVVhSs0yyriuLzkOjgoj33+hwdXEunYgo73ZI8bSbsrDOnEseehGqzA92+4edpJOktpW7fPJhY6B+cxO5hxMgxrgxYH1VlJLqeGCW+xbxZAvE0Tp77SfZLXIwu6fcrQW1JaIxJlqrsvSEUTWY3Nce+FM7/HOYdRKTXF9AdtQ9GonaShxOLGLZT1tPRYzDYrvMBrUqY93g7qjgBabvAjgUnhzHvmip5Xtc17IwGlOR+nreznVgD7LRkO77r6+1w7/s74yTsR3kStZfsOm+znV/MWaQJbtwe77+9ClWy4x3szmf0THhviO46+zvlZmZf6TfEongs6D5OmCv9ASixPAHucCD5C0EAScgz/v7xBCixPDbXBjRw6WH7M7QSQhzMKz4IOVRWefwEKLE8MuefKpEYeCW1zSq+KH/xif1v5w9AieXRceC0PU/L3wTZVclTocTyVCT+v5u/KnkqlFgUuVFiUeRGiUWRGyUWRW6UWBQ5uYX/ASkX0ppkFLxFAAAAAElFTkSuQmCC" />
+        </ui:ImageFound.Image>
+        <ui:ImageFound.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3a4c1046-213a-4b81-a20e-f5e5ace0bde2" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;" TimeoutMS="120000" WaitForReady="COMPLETE" />
+        </ui:ImageFound.Target>
+      </ui:ImageFound>
+      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6bf4ec4f-8e86-43d1-8820-d50768ee9106" InformativeScreenshot="31c79bb215f980e60ac3a7c7af574ea3" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label&amp;gt;span' idx='2' isleaf='1' parentid='un-leftsection' tag='SPAN' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+        </ui:Click.Target>
+      </ui:Click>
+      <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="711.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_3">
+        <TextExpression.Namespaces>
+          <sco:Collection x:TypeArguments="x:String">
+            <x:String>System.Activities</x:String>
+            <x:String>System.Activities.Statements</x:String>
+            <x:String>System.Activities.Expressions</x:String>
+            <x:String>System.Activities.Validation</x:String>
+            <x:String>System.Activities.XamlIntegration</x:String>
+            <x:String>Microsoft.VisualBasic.Activities</x:String>
+            <x:String>System</x:String>
+            <x:String>System.Collections.Generic</x:String>
+            <x:String>System.Data</x:String>
+            <x:String>System.Diagnostics</x:String>
+            <x:String>System.IO</x:String>
+            <x:String>System.Linq</x:String>
+            <x:String>System.Management.Automation</x:String>
+            <x:String>System.Net.Mail</x:String>
+            <x:String>System.Xml</x:String>
+            <x:String>System.Xml.Linq</x:String>
+            <x:String>UiPath.Library</x:String>
+            <x:String>System.Windows.Markup</x:String>
+          </sco:Collection>
+        </TextExpression.Namespaces>
+        <TextExpression.References>
+          <sco:Collection x:TypeArguments="AssemblyReference">
+            <AssemblyReference>System.Activities</AssemblyReference>
+            <AssemblyReference>mscorlib</AssemblyReference>
+            <AssemblyReference>System.Data</AssemblyReference>
+            <AssemblyReference>System</AssemblyReference>
+            <AssemblyReference>System.Core</AssemblyReference>
+            <AssemblyReference>System.Management.Automation</AssemblyReference>
+            <AssemblyReference>System.Xml</AssemblyReference>
+            <AssemblyReference>System.Xml.Linq</AssemblyReference>
+            <AssemblyReference>UiPath.Library</AssemblyReference>
+            <AssemblyReference>PresentationFramework</AssemblyReference>
+            <AssemblyReference>WindowsBase</AssemblyReference>
+            <AssemblyReference>PresentationCore</AssemblyReference>
+            <AssemblyReference>System.Xaml</AssemblyReference>
+          </sco:Collection>
+        </TextExpression.References>
+        <sap2010:WorkflowViewState.ViewStateManager>
+          <sap2010:ViewStateManager>
+            <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+          </sap2010:ViewStateManager>
+        </sap2010:WorkflowViewState.ViewStateManager>
+      </Delay>
+      <ui:ImageFound DisplayName="Image Exists 'chrome.exe HR'" Found="[unread]" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="ImageFound_5">
+        <ui:ImageFound.Image>
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAAtCAYAAADRLVmZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJ+SURBVGhD7ZnPS9NhHMefv6BTx4IOXYoaQYc6dYgOQeCpiwTVIRIivSR0KApCQqpLBBYVkSFG2sGog6xw0ko3TZQx5nI2WS6c/VjTxrbvz3f7fPd9dI5nhNrc88De48XYnh+8ePh8n+dhY1A0zLZtWJblYJomDMNw0HUdmqahUCggn88jl8th7mccA9F+dI5ex+X3rbgSuIQ7oZvojj/Bm9RrjC4HMJmbQliL1BzGhbk0F+ay0cUI7o3fxslXx3GwZzdafKfxKHYf49lPwgm3ClZN2Bd/iwveM9j3dIcj3OY/j5fJPuEk9YCRNC8JEh6bH0HL4ClHmGgebMLj2APh4HrCyleZapcL7+/eifaRi/D+8AoH1htG0hPJMaeGuTSVRsfkNeEAWWAD03048GzXivSh3j24FeoQdpYJxoU5sq80Z4041fRUPiTsKBsr4rR7DKWHhJ1kxBGnh/HhTJewg6w44q3+c8JGmWGHe/fieaJH2CgzjO4eooZNk/Wjf7oTZz96cCLsF/fZBKwrelfYsCGW3xVlb6D5gwfbfdvAXI7VQtyf+V+TvkBbmWw5NREXfbkxuLgHRwJX0R48qop4EMMLQUzkS5+Hw02qiK+lIV6FhnglDfEqNMQraYgL+KzH1BRPGt/UFM9YmdqJ14o5IwETlnriaet36ddaUaOszBtJ2MWXUuIz+iz+WFlHmqKM+C8z7SqXooR4yvzu6q5GevEFM1XcQyxXdzVSi9NKi6QpUorTg1hZ05WRTpy2vPLdo1qkEacTkQ4Xvk//K3UVp1seXZjo7kHH+HqyZeIRLYpZ/QsSxtfiQ7eIJWsJmq25GuuPuv8su+/KRVFx4C9NkSQh0KbOgQAAAABJRU5ErkJggg==" />
+        </ui:ImageFound.Image>
+        <ui:ImageFound.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3cfe879a-3137-4055-a9ff-a9fc92c9a85b" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;" TimeoutMS="120000" WaitForReady="COMPLETE" />
+        </ui:ImageFound.Target>
+      </ui:ImageFound>
+      <If Condition="[unread]" sap:VirtualizedContainerService.HintSize="711.2,293.6" sap2010:WorkflowViewState.IdRef="If_6">
+        <If.Then>
+          <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="pass" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="StepStatus_11" Name="UnRead Message" Status="Pass" TakeScreenshot="True" />
+        </If.Then>
+        <If.Else>
+          <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="Fail" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="StepStatus_12" Name="UnRead Message" Status="Fail" TakeScreenshot="True" />
+        </If.Else>
+      </If>
+      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="85308448-e5b1-4520-9a7f-63624b8dd59b" InformativeScreenshot="222dc7207d139ed956e322a4ec1acb26" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h3&amp;gt;div&amp;gt;label&amp;gt;span' idx='4' isleaf='1' parentid='un-leftsection' tag='SPAN' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+        </ui:Click.Target>
+      </ui:Click>
+      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="62d82254-7209-452c-9bf1-1da3e6c6160f" InformativeScreenshot="4d2df5fb691ab5d41aeb023dc74f8220" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h3&amp;gt;div&amp;gt;label&amp;gt;span' idx='2' isleaf='1' parentid='un-leftsection' tag='SPAN' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+        </ui:Click.Target>
+      </ui:Click>
+      <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="711.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_5">
+        <TextExpression.Namespaces>
+          <sco:Collection x:TypeArguments="x:String">
+            <x:String>System.Activities</x:String>
+            <x:String>System.Activities.Statements</x:String>
+            <x:String>System.Activities.Expressions</x:String>
+            <x:String>System.Activities.Validation</x:String>
+            <x:String>System.Activities.XamlIntegration</x:String>
+            <x:String>Microsoft.VisualBasic.Activities</x:String>
+            <x:String>System</x:String>
+            <x:String>System.Collections.Generic</x:String>
+            <x:String>System.Data</x:String>
+            <x:String>System.Diagnostics</x:String>
+            <x:String>System.IO</x:String>
+            <x:String>System.Linq</x:String>
+            <x:String>System.Management.Automation</x:String>
+            <x:String>System.Net.Mail</x:String>
+            <x:String>System.Xml</x:String>
+            <x:String>System.Xml.Linq</x:String>
+            <x:String>UiPath.Library</x:String>
+            <x:String>System.Windows.Markup</x:String>
+          </sco:Collection>
+        </TextExpression.Namespaces>
+        <TextExpression.References>
+          <sco:Collection x:TypeArguments="AssemblyReference">
+            <AssemblyReference>System.Activities</AssemblyReference>
+            <AssemblyReference>mscorlib</AssemblyReference>
+            <AssemblyReference>System.Data</AssemblyReference>
+            <AssemblyReference>System</AssemblyReference>
+            <AssemblyReference>System.Core</AssemblyReference>
+            <AssemblyReference>System.Management.Automation</AssemblyReference>
+            <AssemblyReference>System.Xml</AssemblyReference>
+            <AssemblyReference>System.Xml.Linq</AssemblyReference>
+            <AssemblyReference>UiPath.Library</AssemblyReference>
+            <AssemblyReference>PresentationFramework</AssemblyReference>
+            <AssemblyReference>WindowsBase</AssemblyReference>
+            <AssemblyReference>PresentationCore</AssemblyReference>
+            <AssemblyReference>System.Xaml</AssemblyReference>
+          </sco:Collection>
+        </TextExpression.References>
+        <sap2010:WorkflowViewState.ViewStateManager>
+          <sap2010:ViewStateManager>
+            <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+          </sap2010:ViewStateManager>
+        </sap2010:WorkflowViewState.ViewStateManager>
+      </Delay>
+      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f99ee421-866c-4a3d-bc58-fd5a0717d170" InformativeScreenshot="31c79bb215f980e60ac3a7c7af574ea3" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label&amp;gt;span' idx='2' isleaf='1' parentid='un-leftsection' tag='SPAN' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+        </ui:Click.Target>
+      </ui:Click>
+      <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[read]" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
+        <ui:UiElementExists.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="15892206-f785-430e-966e-a72ecf2ba0b7" InformativeScreenshot="8cc1e2382416bf3fb3c942a7356818a9" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl parentid='un-leftsection' tag='BUTTON' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+        </ui:UiElementExists.Target>
+      </ui:UiElementExists>
+      <If Condition="[read]" sap:VirtualizedContainerService.HintSize="711.2,293.6" sap2010:WorkflowViewState.IdRef="If_7">
+        <If.Then>
+          <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="pass" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="StepStatus_13" Name="Read Message" Status="Pass" TakeScreenshot="True" />
+        </If.Then>
+        <If.Else>
+          <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="Fail" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="StepStatus_14" Name="Read Message" Status="Fail" TakeScreenshot="True" />
+        </If.Else>
+      </If>
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="711.2,262.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="TESTING.xlsx">
+        <ui:ExcelApplicationScope.Body>
+          <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,152.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExcelReadRange AddHeaders="True" DataTable="[MessageCenter]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" SheetName="MessageCenter">
+                <ui:ExcelReadRange.Range>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </ui:ExcelReadRange.Range>
+              </ui:ExcelReadRange>
+            </Sequence>
+          </ActivityAction>
+        </ui:ExcelApplicationScope.Body>
+      </ui:ExcelApplicationScope>
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[MessageCenter]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="711.2,348.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,228" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into 'INPUT'" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_5" SimulateType="True" Text="[CurrentRow.Item(&quot;Search&quot;).ToString]">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="664af43d-7b26-423d-b37b-41c9e6096816" InformativeScreenshot="3ce47f982c100b088221e797f6cf7f8f" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl idx='2' tag='INPUT' type='text' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+      </ui:ForEachRow>
+      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'B'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_27" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="043e70dd-2827-44d8-8110-aa83df605858" InformativeScreenshot="7e27ccce61a7767b30ab6eab4d5fc79d" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;b' idx='2' parentid='collapse1' tag='B' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+        </ui:Click.Target>
+      </ui:Click>
+      <ui:SelectItem AlterIfDisabled="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" ContinueOnError="True" DisplayName="Select Item 'SELECT'" sap:VirtualizedContainerService.HintSize="711.2,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="Jan">
+        <ui:SelectItem.Items>
+          <scg:List x:TypeArguments="x:String" Capacity="16">
+            <x:String>Jan</x:String>
+            <x:String>Feb</x:String>
+            <x:String>Mar</x:String>
+            <x:String>Apr</x:String>
+            <x:String>May</x:String>
+            <x:String>Jun</x:String>
+            <x:String>Jul</x:String>
+            <x:String>Aug</x:String>
+            <x:String>Sep</x:String>
+            <x:String>Oct</x:String>
+            <x:String>Nov</x:String>
+            <x:String>Dec</x:String>
+          </scg:List>
+        </ui:SelectItem.Items>
+        <ui:SelectItem.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2131165e-3fa8-47b4-a7ee-d77fa630348c" InformativeScreenshot="d906519d330acb3d0a9bd3003e432a77" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;thead&amp;gt;tr&amp;gt;th&amp;gt;select' idx='7' tag='SELECT' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+        </ui:SelectItem.Target>
+      </ui:SelectItem>
+      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'TD'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_28" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e9885bd7-5eef-43a4-a02f-91d07dbfb73a" InformativeScreenshot="a04c787e379559a0bf976e46a0deede8" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl aaname=' JanFebMarAprMayJunJulAugSepOctNovDec197119721973197419751976197*' idx='2' tag='TABLE' /&gt;&lt;webctrl tableCol='6' tag='TD' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+        </ui:Click.Target>
+      </ui:Click>
+      <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 5 seconds" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="711.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_1">
+        <TextExpression.Namespaces>
+          <sco:Collection x:TypeArguments="x:String">
+            <x:String>System.Activities</x:String>
+            <x:String>System.Activities.Statements</x:String>
+            <x:String>System.Activities.Expressions</x:String>
+            <x:String>System.Activities.Validation</x:String>
+            <x:String>System.Activities.XamlIntegration</x:String>
+            <x:String>Microsoft.VisualBasic.Activities</x:String>
+            <x:String>System</x:String>
+            <x:String>System.Collections.Generic</x:String>
+            <x:String>System.Data</x:String>
+            <x:String>System.Diagnostics</x:String>
+            <x:String>System.IO</x:String>
+            <x:String>System.Linq</x:String>
+            <x:String>System.Management.Automation</x:String>
+            <x:String>System.Net.Mail</x:String>
+            <x:String>System.Xml</x:String>
+            <x:String>System.Xml.Linq</x:String>
+            <x:String>UiPath.Library</x:String>
+            <x:String>System.Windows.Markup</x:String>
+          </sco:Collection>
+        </TextExpression.Namespaces>
+        <TextExpression.References>
+          <sco:Collection x:TypeArguments="AssemblyReference">
+            <AssemblyReference>System.Activities</AssemblyReference>
+            <AssemblyReference>mscorlib</AssemblyReference>
+            <AssemblyReference>System.Data</AssemblyReference>
+            <AssemblyReference>System</AssemblyReference>
+            <AssemblyReference>System.Core</AssemblyReference>
+            <AssemblyReference>System.Management.Automation</AssemblyReference>
+            <AssemblyReference>System.Xml</AssemblyReference>
+            <AssemblyReference>System.Xml.Linq</AssemblyReference>
+            <AssemblyReference>UiPath.Library</AssemblyReference>
+            <AssemblyReference>PresentationFramework</AssemblyReference>
+            <AssemblyReference>WindowsBase</AssemblyReference>
+            <AssemblyReference>PresentationCore</AssemblyReference>
+            <AssemblyReference>System.Xaml</AssemblyReference>
+          </sco:Collection>
+        </TextExpression.References>
+        <sap2010:WorkflowViewState.ViewStateManager>
+          <sap2010:ViewStateManager>
+            <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+          </sap2010:ViewStateManager>
+        </sap2010:WorkflowViewState.ViewStateManager>
+      </Delay>
+      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition Position="Center">
+            <ui:CursorPosition.OffsetX>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetX>
+            <ui:CursorPosition.OffsetY>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:CursorPosition.OffsetY>
+          </ui:CursorPosition>
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8edd8664-5f51-4bad-80a7-3ac6afa7a72d" InformativeScreenshot="18c4ce71fabeb3f9ee49eeb334675ecf" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl aaname='Filter' idx='2' tag='BUTTON' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
+        </ui:Click.Target>
+      </ui:Click>
+      <ui:ImageFound DisplayName="Image Exists 'chrome.exe HR'" Found="[subject]" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="ImageFound_6">
+        <ui:ImageFound.Image>
+          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHQAAAAmCAYAAAAV3L/bAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUcSURBVHhe7ZldSyNJFIb358lAEwkKcaDJhQ4bZCWwuiANg2AcJgRJQIXVCw04QowXGZYElsDQIAkMkcVhSEAaJIPQCCGQv/BuVdIfpzvV6R4nrdj0xXPTdarr4606VefUb6PRCDHRIRY0YsSCRoxY0IgRCxoxYkEjRixoxAgsqHZdRf7PNFKLb7CwwEkgKW8hV26g+yCwr2QNO8Z+e6rc4rpk2/1RhWZ+16rYML8LkJbTyChHqN38mP6nH45/l9AiZa19Zzszof2l9DuoHSjIpBKWLe/v5m4Z9e+609ZnnN44+23iL6jewfG63TEhUhr5f50TG7agNgnIH5voD8k//QhR0O7nHaREthYJZI460M06zyuohsssEXNxDduFE1w2VNTKJeSyS5CsBlZQbA+sunMVNF1A7YsK1YC3nd9Ok7YT2LjSpv/tRUBBN0/tNoW0NQxIXT5m2qdkdg/FUmlMXlkjZW+wetqb1HvU0BL8++wv21Yu1KbK1S+36JO2TWYLyibb6sRyAao+bdO9IIMggsxVUMFO4DgmMF1GV2AjJKCgxWtSxw/+T8msyxa36nKtnN4FscniUnOVE2g/NirBF+tMQakoSeYmRDajoYq8YbOwoKBunKfPIejosYmcaePhgoSEIGjnYMmql/KaKwa1k81dKiAUQftXtijSh6bDvdgMoLVNN9CG9jj5/iyCjtoomjYvKmgHh8tmvdk7b9QmXm+7YZ+lLkIRlLuIVbNxdiZsnncCXz6eRdCvR0j62YiYt6D35H+Sz8IaDqA/6BN0+87hJhxB2e5rHdDLB2NxBZuFKtRvPzCYIW6ogrJJ6d9U8f6tUc7PrGvBmeVFQEFnQsf0vQzZ/P4zC2sGIQnK0XFb2YFsHeYEfus9eZk41IL1wR0y+TJvQb3G8AuEKKjBQw/1EwWrVmKB8JJx6HhRqaHEoTPDFuahrP+9SkEJg14blwducZ1ub66C/l7GrXnujOmh06giTxIeKdaG1wVjioCCBj5DX5fLncFQQ/3DitXwwvIROkbZs1yKhvR2uYTDG4GNiHkL+jOXooCEIChzsUaWo1hi56TQhjFkoYMgWKYhT2BBs1U7+xFEUIZj4FcTN9j/ZrvG1p3gJjlvQZ8attDxughBULFQ0/RwlhbY0Y6/u/BcEN3zNaMui3VLRPiAgqofDRuGOfDuadr6lrkQTAZ1ka4M09MEdSYMrLSegBdMLLCQZd9uPLnbEF48dLbDrGS0tIemkVhwusOEuFP3DeSoy/xKyoIIesdsrEVnu9xBc48sphPcOvqts0Vgj0tyeY+nCuror5TF2X9+qb81fOq5ygkhCMrQ2S61Yj3+BJRF7u8q6tydsUvJ8e66I0Z1p7z6/yikfJKsPq40jLpZJEkoJG2zBUPqOibIlZwf1y8ozlDqHdtppnB8MdF+ywry5RrUz2XkHC9HWXy6I20y6ET6JuddCXJ+b6DjXVUK4/HWKydTyflZ6UFOOIJy7pvIyz7PZ6zz4icsFsOebzkGIiL1vmaLYeI453x4u4O6Sxi+ezdFIZbFCnKC+JVOpD/uC1CQ8bqezzwIT1AD/sB9qKxDXrbFlVIej7ZutEmY437w5Q/Ul9cenfUTVFqCvK7gsNKGJjgKxhixc0a2n/nGD82FKloed4JfE9SAj7ewBZmOl88Vb1d0SRMQuqAxr4NY0IgRCxoxYkEjRixoxIgFjRixoBEjFjRixIJGjFjQiBELGjFiQSNGLGikGOF/EF+fZce0PyoAAAAASUVORK5CYII=" />
+        </ui:ImageFound.Image>
+        <ui:ImageFound.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9210e1ec-e764-4208-97b6-8e09d664cdd1" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;" TimeoutMS="120000" WaitForReady="COMPLETE" />
+        </ui:ImageFound.Target>
+      </ui:ImageFound>
+      <If Condition="[subject]" sap:VirtualizedContainerService.HintSize="711.2,293.6" sap2010:WorkflowViewState.IdRef="If_3">
+        <If.Then>
+          <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="pass" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="StepStatus_5" Name="Redirect to messge box" Status="Pass" TakeScreenshot="True" />
+        </If.Then>
+        <If.Else>
+          <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="Fail" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="StepStatus_6" Name="Redirect to messge box" Status="Fail" TakeScreenshot="True" />
+        </If.Else>
+      </If>
+    </Sequence>
+    <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 5 seconds" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="903.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_1">
+      <TextExpression.Namespaces>
+        <sco:Collection x:TypeArguments="x:String">
+          <x:String>System.Activities</x:String>
+          <x:String>System.Activities.Statements</x:String>
+          <x:String>System.Activities.Expressions</x:String>
+          <x:String>System.Activities.Validation</x:String>
+          <x:String>System.Activities.XamlIntegration</x:String>
+          <x:String>Microsoft.VisualBasic.Activities</x:String>
+          <x:String>System</x:String>
+          <x:String>System.Collections.Generic</x:String>
+          <x:String>System.Data</x:String>
+          <x:String>System.Diagnostics</x:String>
+          <x:String>System.IO</x:String>
+          <x:String>System.Linq</x:String>
+          <x:String>System.Management.Automation</x:String>
+          <x:String>System.Net.Mail</x:String>
+          <x:String>System.Xml</x:String>
+          <x:String>System.Xml.Linq</x:String>
+          <x:String>UiPath.Library</x:String>
+          <x:String>System.Windows.Markup</x:String>
+        </sco:Collection>
+      </TextExpression.Namespaces>
+      <TextExpression.References>
+        <sco:Collection x:TypeArguments="AssemblyReference">
+          <AssemblyReference>System.Activities</AssemblyReference>
+          <AssemblyReference>mscorlib</AssemblyReference>
+          <AssemblyReference>System.Data</AssemblyReference>
+          <AssemblyReference>System</AssemblyReference>
+          <AssemblyReference>System.Core</AssemblyReference>
+          <AssemblyReference>System.Management.Automation</AssemblyReference>
+          <AssemblyReference>System.Xml</AssemblyReference>
+          <AssemblyReference>System.Xml.Linq</AssemblyReference>
+          <AssemblyReference>UiPath.Library</AssemblyReference>
+          <AssemblyReference>PresentationFramework</AssemblyReference>
+          <AssemblyReference>WindowsBase</AssemblyReference>
+          <AssemblyReference>PresentationCore</AssemblyReference>
+          <AssemblyReference>System.Xaml</AssemblyReference>
+        </sco:Collection>
+      </TextExpression.References>
+      <sap2010:WorkflowViewState.ViewStateManager>
+        <sap2010:ViewStateManager>
+          <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+        </sap2010:ViewStateManager>
+      </sap2010:WorkflowViewState.ViewStateManager>
+    </Delay>
+    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Logout" sap:VirtualizedContainerService.HintSize="903.2,107.2" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3b2675cc-9d46-4f3f-a316-66c04e7d144a" InformativeScreenshot="e3fdc016d0cc7792a73d23faa5efb806" Selector="&lt;html app='chrome.exe' title='HR HUB 360 - Human Capital Management Redefined! - [Fabrikam]' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;form&amp;gt;ul&amp;gt;li&amp;gt;a&amp;gt;i' idx='2' parentid='logoutForm' tag='I' /&gt;" TimeoutMS="1000">
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ra:StopRecording ContinueOnError="{x:Null}" isStopped="{x:Null}" DisplayName="Stop Recording" sap:VirtualizedContainerService.HintSize="903.2,22.4" sap2010:WorkflowViewState.IdRef="StopRecording_1" />
+    <ui:CloseApplication DisplayName="Close Application 'chrome.exe HR'" sap:VirtualizedContainerService.HintSize="903.2,107.2" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
+      <ui:CloseApplication.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b439e780-4d80-49c7-9530-f2f8d7838ac2" InformativeScreenshot="2e3e8aa31eb8c3725154d1dac7c60b65" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='HR HUB 360 Human Capital Management Redefined! - [Fabrikam] - Go*' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:CloseApplication.Target>
+    </ui:CloseApplication>
+  </Sequence>
+</Activity>
